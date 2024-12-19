@@ -1,0 +1,36 @@
+Section 2
+---------
+The Purpose of this section is to deal with some server side logic:
+
+for that please use php, with the lavarel framework (https://laravel.com/) and mysql:
+
+write a server side api that loads data from mysql.
+1. Add a login screen (html screen) that will invoke the login api in the server side.
+
+POST /login
+json body {user,password}
+
+returns 200 in case of success and 401 in case that the user and password do not match in db.
+
+in case of successful login, redirect to the /dashboard page (the page that you built in section 1).
+
+2. the dashboard will load the data of the messages from the server side.
+
+GET /messages
+will retrieve the data from the messages table.
+
+
+DB tables:
+
+users:
+user
+password
+
+messages:
+message_title
+message_body
+message_time
+
+
+* The output of this step is the api server written in php, html, css files.
+* please include all the relevant files

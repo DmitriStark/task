@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to the sidebar CSS -->
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="sidebar">
+        <div class="profile">
+          <img src="./assets/profile.jpeg" alt="Profile Icon" />
+          <div class="name">John Doe</div>
+          <div class="status">Art Director</div>
+          <!-- Status info -->
+        </div>
+        <!-- Dashboard Section -->
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/dashboardicon.bmp"
+              alt="icon"
+            />
+            Dashboard
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Dashboard v.1</a></li>
+              <li><a href="#">Dashboard v.2</a></li>
+              <li><a href="#">Dashboard v.3</a></li>
+              <li><a href="#">Dashboard v.4</a></li>
+              <li><a href="#">Dashboard v.5</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/layoutsicon.bmp"
+              alt="icon"
+            />
+            Layouts
+          </h3>
+          <div class="section-content"></div>
+        </div>
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img class="section-icon" src="./assets/graphicon.bmp" alt="icon" />
+            Graphs
+          </h3>
+          <div class="section-content"></div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img class="section-icon" src="./assets/mailicon.bmp" alt="icon" />
+            Mailbox
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Inbox</a></li>
+              <li><a href="#">Sent</a></li>
+              <li><a href="#">Draft</a></li>
+              <li><a href="#">Spam</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets//metricicon.bmp"
+              alt="icon"
+            />
+            Metrics
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Metric 1</a></li>
+              <li><a href="#">Metric 2</a></li>
+              <li><a href="#">Metric 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/widgeticon.bmp"
+              alt="icon"
+            />
+            Widgets
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Widget 1</a></li>
+              <li><a href="#">Widget 2</a></li>
+              <li><a href="#">Widget 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img class="section-icon" src="./assets/formsicon.bmp" alt="icon" />
+            Forms
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Form 1</a></li>
+              <li><a href="#">Form 2</a></li>
+              <li><a href="#">Form 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/appviewicon.bmp"
+              alt="icon"
+            />
+            App Views
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">App View 1</a></li>
+              <li><a href="#">App View 2</a></li>
+              <li><a href="#">App View 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/otherpagesicon.bmp"
+              alt="icon"
+            />
+            Other Pages
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Page 1</a></li>
+              <li><a href="#">Page 2</a></li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img class="section-icon" src="./assets/missicon.bmp" alt="icon" />
+            Miscellaneous UI Elements
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Element 1</a></li>
+              <li><a href="#">Element 2</a></li>
+              <li><a href="#">Element 3</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img class="section-icon" src="./assets/uieleicon.bmp" alt="icon" />
+            UI Elements
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Element 1</a></li>
+              <li><a href="#">Element 2</a></li>
+              <li><a href="#">Element 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img class="section-icon" src="./assets/Gridoicon.bmp" alt="icon" />
+            Grid Options
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Option 1</a></li>
+              <li><a href="#">Option 2</a></li>
+              <li><a href="#">Option 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img class="section-icon" src="./assets/Gridoicon.bmp" alt="icon" />
+            Tablets
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Tablet 1</a></li>
+              <li><a href="#">Tablet 2</a></li>
+              <li><a href="#">Tablet 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/ecomerceicon.bmp"
+              alt="icon"
+            />
+            E-commerce
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Product 1</a></li>
+              <li><a href="#">Product 2</a></li>
+              <li><a href="#">Product 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/galleryicon.bmp"
+              alt="icon"
+            />
+            Gallery
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Gallery 1</a></li>
+              <li><a href="#">Gallery 2</a></li>
+              <li><a href="#">Gallery 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/menulevelsicon.bmp"
+              alt="icon"
+            />
+            Menu Levels
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Level 1</a></li>
+              <li><a href="#">Level 2</a></li>
+              <li><a href="#">Level 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/animationicon.bmp"
+              alt="icon"
+            />
+            Animations
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Animation 1</a></li>
+              <li><a href="#">Animation 2</a></li>
+              <li><a href="#">Animation 3</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h3 class="section-title" onclick="toggleSection(this)">
+            <img
+              class="section-icon"
+              src="./assets/landingpageicon.bmp"
+              alt="icon"
+            />
+            Landing Page
+          </h3>
+          <div class="section-content">
+            <ul>
+              <li><a href="#">Landing Page 1</a></li>
+              <li><a href="#">Landing Page 2</a></li>
+              <li><a href="#">Landing Page 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="top-bar">
+          <div class="card">
+            <div class="header">
+              <p>Income</p>
+              <span class="monthlyspan">Monthly</span>
+            </div>
+            <div>
+              <p>40 886,20</p>
+              <div>
+                <span>Total income</span
+                ><span class="percentagofspan1"
+                  >98%<img
+                    style="width: 10px"
+                    class="progress-img"
+                    src="./assets/pottersign.bmp"
+                    alt="potter sign"
+                /></span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header">
+              <p>Orders</p>
+              <span class="anual-span">Anual</span>
+            </div>
+            <div>
+              <p>275,800</p>
+              <div>
+                <span>New orders</span
+                ><span class="percentagofspan2"
+                  >20%<img
+                    style="width: 10px"
+                    class="progress-img"
+                    src="./assets/uparrow.bmp"
+                    alt="uparrow"
+                /></span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header">
+              <p>Vistits</p>
+              <span class="visitors-span">Today</span>
+            </div>
+            <div>
+              <p>106,120</p>
+              <div>
+                <span>New visits</span
+                ><span class="percentagofspan3"
+                  >44%<img
+                    style="width: 10px"
+                    class="progress-img"
+                    src="./assets/uparrow.bmp"
+                    alt="uparrow"
+                /></span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="header">
+              <p>User Activity</p>
+              <span class="activity-span">Low value</span>
+            </div>
+            <div>
+              <p>80,600</p>
+              <div>
+                <span>In first month</span
+                ><span class="percentagofspan4"
+                  >38%<img
+                    style="width: 10px"
+                    class="progress-img"
+                    src="./assets/redarrowdown.bmp"
+                    alt="downarrow"
+                /></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="graphs">
+          <div class="headergraph">
+            <h3 class="orders">Orders</h3>
+            <div class="icons">
+              <button>Today</button>
+              <button>Monthly</button>
+              <button>Anual</button>
+            </div>
+          </div>
+          <div class="graphContent">
+            <div class="image-container">
+              <img src="./assets/orders.bmp" alt="Orders Graph" />
+            </div>
+            <div class="progress-bars">
+              <div class="progress-bar">
+                <span class="graph-amout">2,346</span>
+                <div class="progress-label">
+                  <span class="label">Total Orders in Period</span>
+                  <span class="label2"
+                    >60%<img
+                      style="width: 10px"
+                      class="progress-img"
+                      src="./assets/uparrow.bmp"
+                      alt="up arrow"
+                  /></span>
+                </div>
+
+                <div class="bar">
+                  <div class="fill" style="width: 48%"></div>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="graph-amout">4,422</span>
+                <div class="progress-label">
+                  <span class="label">Orders in Last Month </span>
+                  <span class="label2"
+                    >60%<img
+                      style="width: 10px"
+                      class="progress-img"
+                      src="./assets/downarrow.bmp"
+                      alt="down arrow"
+                  /></span>
+                </div>
+                <div class="bar">
+                  <div class="fill" style="width: 60%"></div>
+                </div>
+              </div>
+              <div class="progress-bar">
+                <span class="graph-amout">9,180</span>
+                <div class="progress-label">
+                  <span class="label">Monthly Income from Orders</span>
+                  <span class="label2"
+                    >60%<img
+                      style="width: 10px"
+                      class="progress-img"
+                      src="./assets/pottersign.bmp"
+                      alt="potter sign"
+                  /></span>
+                </div>
+                <div class="bar">
+                  <div class="fill" style="width: 22%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Section -->
+      </div>
+    </div>
+
+    <script>
+      function toggleSection(sectionTitle) {
+        const title = sectionTitle;
+        const content = sectionTitle.nextElementSibling;
+        content.classList.toggle("open");
+        title.classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>

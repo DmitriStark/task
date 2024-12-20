@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard UI</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <!-- Link to the sidebar CSS -->
   </head>
   <body>
     <div class="dashboard">
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
       <div class="sidebar">
         <div class="profile">
           <img src="./assets/profile.jpeg" alt="Profile Icon" />
@@ -17,25 +27,27 @@
           <!-- Status info -->
         </div>
         <!-- Dashboard Section -->
-        <div class="section">
-          <h3 class="section-title" onclick="toggleSection(this)">
+        <div class="section open">
+          <h3 class="section-title open" onclick="toggleSection(this)">
             <img
               class="section-icon"
               src="./assets/dashboardicon.bmp"
               alt="icon"
             />
             Dashboard
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content">
             <ul>
               <li><a href="#">Dashboard v.1</a></li>
-              <li><a href="#">Dashboard v.2</a></li>
+              <li ><a style="color: #fff;" href="#">Dashboard v.2</a></li>
               <li><a href="#">Dashboard v.3</a></li>
               <li><a href="#">Dashboard v.4</a></li>
               <li><a href="#">Dashboard v.5</a></li>
             </ul>
           </div>
         </div>
+
         <div class="section">
           <h3 class="section-title" onclick="toggleSection(this)">
             <img
@@ -51,14 +63,36 @@
           <h3 class="section-title" onclick="toggleSection(this)">
             <img class="section-icon" src="./assets/graphicon.bmp" alt="icon" />
             Graphs
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content"></div>
         </div>
 
         <div class="section">
-          <h3 class="section-title" onclick="toggleSection(this)">
-            <img class="section-icon" src="./assets/mailicon.bmp" alt="icon" />
-            Mailbox
+          <h3
+            style="display: flex; justify-content: space-between"
+            class="section-title"
+            onclick="toggleSection(this)"
+          >
+            <p>
+              <img
+                class="section-icon"
+                src="./assets/mailicon.bmp"
+                alt="icon"
+              />
+              Mailbox
+            </p>
+            <span class="new-badge"
+              style="
+                background-color: orange;
+                border-radius: 3px;
+                color: white;
+                display: inline-block;
+                padding: 4px 4px; /* Adjust padding to make it more square */
+                font-size: 12px; /* Adjust font size for proper alignment */
+              "
+              >16/24</span
+            >
           </h3>
           <div class="section-content">
             <ul>
@@ -110,6 +144,7 @@
           <h3 class="section-title" onclick="toggleSection(this)">
             <img class="section-icon" src="./assets/formsicon.bmp" alt="icon" />
             Forms
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content">
             <ul>
@@ -121,13 +156,30 @@
         </div>
 
         <div class="section">
-          <h3 class="section-title" onclick="toggleSection(this)">
-            <img
-              class="section-icon"
-              src="./assets/appviewicon.bmp"
-              alt="icon"
-            />
-            App Views
+          <h3
+            style="display: flex; justify-content: space-between"
+            class="section-title"
+            onclick="toggleSection(this)"
+          >
+            <p>
+              <img
+                class="section-icon"
+                src="./assets/appviewicon.bmp"
+                alt="icon"
+              />
+              App Views
+            </p>
+            <span class="new-badge"
+              style="
+                background-color: aquamarine;
+                border-radius: 3px;
+                color: white;
+                display: inline-block;
+                padding: 4px 4px; /* Adjust padding to make it more square */
+                font-size: 12px; /* Adjust font size for proper alignment */
+              "
+              >SPECIAL</span
+            >
           </h3>
           <div class="section-content">
             <ul>
@@ -146,6 +198,7 @@
               alt="icon"
             />
             Other Pages
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content">
             <ul>
@@ -157,9 +210,31 @@
         </div>
 
         <div class="section">
-          <h3 class="section-title" onclick="toggleSection(this)">
-            <img class="section-icon" src="./assets/missicon.bmp" alt="icon" />
-            Miscellaneous UI Elements
+          <h3
+            style="display: flex; justify-content: space-between"
+            class="section-title"
+            onclick="toggleSection(this)"
+          >
+            <p>
+              <img
+                class="section-icon"
+                src="./assets/missicon.bmp"
+                alt="icon"
+              />
+              Miscellaneous
+            </p>
+
+            <span class="new-badge"
+              style="
+                background-color: aqua;
+                border-radius: 3px;
+                color: white;
+                display: inline-block;
+                padding: 4px 6px; /* Adjust padding to make it more square */
+                font-size: 12px; /* Adjust font size for proper alignment */
+              "
+              >NEW</span
+            >
           </h3>
           <div class="section-content">
             <ul>
@@ -173,6 +248,7 @@
           <h3 class="section-title" onclick="toggleSection(this)">
             <img class="section-icon" src="./assets/uieleicon.bmp" alt="icon" />
             UI Elements
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content">
             <ul>
@@ -201,6 +277,7 @@
           <h3 class="section-title" onclick="toggleSection(this)">
             <img class="section-icon" src="./assets/Gridoicon.bmp" alt="icon" />
             Tablets
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content">
             <ul>
@@ -219,6 +296,7 @@
               alt="icon"
             />
             E-commerce
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content">
             <ul>
@@ -237,6 +315,7 @@
               alt="icon"
             />
             Gallery
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content">
             <ul>
@@ -255,6 +334,7 @@
               alt="icon"
             />
             Menu Levels
+            <i class="fa fa-solid fa-angle-left" id="arrow-icon"></i>
           </h3>
           <div class="section-content">
             <ul>
@@ -266,13 +346,31 @@
         </div>
 
         <div class="section">
-          <h3 class="section-title" onclick="toggleSection(this)">
-            <img
-              class="section-icon"
-              src="./assets/animationicon.bmp"
-              alt="icon"
-            />
-            Animations
+          <h3
+            style="display: flex; justify-content: space-between"
+            class="section-title"
+            onclick="toggleSection(this)"
+          >
+            <p>
+              <img
+                class="section-icon"
+                src="./assets/animationicon.bmp"
+                alt="icon"
+              />
+              Animations
+            </p>
+
+            <span class="new-badge"
+              style="
+                background-color: aqua;
+                border-radius: 3px;
+                color: white;
+                display: inline-block;
+                padding: 4px 6px; /* Adjust padding to make it more square */
+                font-size: 12px; /* Adjust font size for proper alignment */
+              "
+              >62</span
+            >
           </h3>
           <div class="section-content">
             <ul>
@@ -283,14 +381,33 @@
           </div>
         </div>
 
-        <div class="section">
-          <h3 class="section-title" onclick="toggleSection(this)">
-            <img
-              class="section-icon"
-              src="./assets/landingpageicon.bmp"
-              alt="icon"
-            />
-            Landing Page
+        <div class="section landingselection">
+          <h3
+            style="display: flex; justify-content: space-between"
+            class="section-title"
+            onclick="toggleSection(this)"
+          >
+          <p>
+
+              <img
+                class="section-icon"
+                src="./assets/landingpageicon.bmp"
+                alt="icon"
+              />
+              Landing Page
+          </p>
+
+            <span class="new-badge"
+              style="
+                background-color: #fff;
+                border-radius: 3px;
+                color: aquamarine;
+                display: inline-block;
+                padding: 4px 6px; /* Adjust padding to make it more square */
+                font-size: 12px; /* Adjust font size for proper alignment */
+              "
+              >New</span
+            >
           </h3>
           <div class="section-content">
             <ul>
@@ -382,6 +499,8 @@
           </div>
         </div>
 
+        <div class="otionabso"><img src="./assets/optionicon.bmp" alt="optionicon"></div>
+
         <div class="graphs">
           <div class="headergraph">
             <h3 class="orders">Orders</h3>
@@ -449,17 +568,387 @@
           </div>
         </div>
 
-        <!-- Content Section -->
+        <div class="dashboard-content">
+          <div class="messageCon">
+            <div>
+              <div class="titlemessage" style="background-color: white">
+                <h1>Messages</h1>
+                <div>
+                  <img src="./assets/messagesarrow icon.bmp" alt="icon" />
+                  <img src="./assets/messagetoolicon.bmp" alt="icon" />
+                  <img src="./assets/messagecloseicon.bmp" alt="icon" />
+                </div>
+              </div>
+              <div class="messageheader">
+                <div class="titleheader">
+                  <img
+                    src="./assets/messageheader.bmp"
+                    alt="message header"
+                    class="header-image"
+                  />
+                  <h1>New Messages</h1>
+                </div>
+                <div>
+                  <p class="titleheaderp">
+                    You have 22 new messages and 16 waiting in the draft folder.
+                  </p>
+                </div>
+              </div>
+              <div class="messages">
+                <div class="message">
+                  <div class="mestitname">
+                    <h2>Monica Smith</h2>
+                    <p style="color: green">1m ago</p>
+                  </div>
+                  <p class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas officiis necessitatibus debitis eius aliquid
+                    pariatur ullam voluptatem quam.
+                  </p>
+                  <p class="message-time">
+                    Today <span>5:60 PM - <span>12.06.2014</span></span>
+                  </p>
+                </div>
+                <div class="message">
+                  <div class="mestitname">
+                    <h2>jogn Angel</h2>
+                    <p>2m ago</p>
+                  </div>
+                  <p class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas officiis necessitatibus
+                  </p>
+                  <p class="message-time">
+                    Today <span>5:60 PM - <span>12.06.2014</span></span>
+                  </p>
+                </div>
+                <div class="message">
+                  <div class="mestitname">
+                    <h2>jesica Ocean</h2>
+                    <p>5m ago</p>
+                  </div>
+                  <p class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas officiis necessitatibus
+                  </p>
+                  <p class="message-time">
+                    Today <span>5:60 PM - <span>12.06.2014</span></span>
+                  </p>
+                </div>
+                <div class="message">
+                  <div class="mestitname">
+                    <h2>Monica jackson</h2>
+                    <p>5m ago</p>
+                  </div>
+                  <p class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas officiis necessitatibus
+                  </p>
+                  <p class="message-time">
+                    Today <span>5:60 PM - <span>12.06.2014</span></span>
+                  </p>
+                </div>
+                <div class="message">
+                  <div class="mestitname">
+                    <h2>Anna Legend</h2>
+                    <p>5m ago</p>
+                  </div>
+                  <p class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas officiis necessitatibus
+                  </p>
+                  <p class="message-time">
+                    Today <span>5:60 PM - <span>12.06.2014</span></span>
+                  </p>
+                </div>
+                <div class="message">
+                  <div class="mestitname">
+                    <h2>Domian Nowak</h2>
+                    <p>5m ago</p>
+                  </div>
+                  <p class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas officiis necessitatibus
+                  </p>
+                  <p class="message-time">
+                    Today <span>5:60 PM - <span>12.06.2014</span></span>
+                  </p>
+                </div>
+                <div class="message">
+                  <div class="mestitname">
+                    <h2>Gary Smith</h2>
+                    <p>5m ago</p>
+                  </div>
+                  <p class="message-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptas officiis necessitatibus
+                  </p>
+                  <p class="message-time">
+                    Today <span>5:60 PM - <span>12.06.2014</span></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="side-content">
+              <div class="top-row">
+                <div class="user-projects">
+                  <div
+                    class="userproject-header"
+                    style="background-color: white"
+                  >
+                    <h1>User projects list</h1>
+                    <div>
+                      <img src="./assets/messagesarrow icon.bmp" alt="icon" />
+                      <img src="./assets/messagetoolicon.bmp" alt="icon" />
+                      <img src="./assets/messagecloseicon.bmp" alt="icon" />
+                    </div>
+                  </div>
+
+                  <!-- Table for displaying user project details -->
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Status</th>
+                        <th>Date</th>
+                        <th>User</th>
+                        <th>Values</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="project-row">
+                        <td>Pending...</td>
+                        <td>
+                          <img
+                            src="./assets/watchicon.bmp"
+                            alt="watch icon"
+                          /><span>11:20<span>pm</span></span>
+                        </td>
+                        <td>Samantha</td>
+                        <td>
+                          <img src="./assets/uparrow.bmp" alt="arrowUp" /><span
+                            >24%</span
+                          >
+                        </td>
+                      </tr>
+                      <tr class="project-row">
+                        <td>
+                          <span
+                            style="
+                              background-color: orange;
+                              border-radius: 3px;
+                              color: white;
+                              display: inline-block;
+                              padding: 4px 8px; /* Adjust padding to make it more square */
+                              font-size: 12px; /* Adjust font size for proper alignment */
+                            "
+                            >Canceled</span
+                          >
+                        </td>
+                        <td>
+                          <img
+                            src="./assets/watchicon.bmp"
+                            alt="watch icon"
+                          /><span>10:40<span>am</span></span>
+                        </td>
+                        <td>Monica</td>
+                        <td>
+                          <img src="./assets/uparrow.bmp" alt="arrowUp" /><span
+                            >66%</span
+                          >
+                        </td>
+                      </tr>
+                      <tr class="project-row">
+                        <td style="border-radius: 3px">Pending...</td>
+                        <td>
+                          <img
+                            src="./assets/watchicon.bmp"
+                            alt="watch icon"
+                          /><span>01:30<span>pm</span></span>
+                        </td>
+                        <td>john</td>
+                        <td>
+                          <img src="./assets/uparrow.bmp" alt="arrowUp" /><span
+                            >54%</span
+                          >
+                        </td>
+                      </tr>
+                      <tr class="project-row">
+                        <td style="border-radius: 3px">Pending...</td>
+                        <td>
+                          <img
+                            src="./assets/watchicon.bmp"
+                            alt="watch icon"
+                          /><span>02:20<span>pm</span></span>
+                        </td>
+                        <td>Agnes</td>
+                        <td>
+                          <img src="./assets/uparrow.bmp" alt="arrowUp" /><span
+                            >12%</span
+                          >
+                        </td>
+                      </tr>
+                      <tr class="project-row">
+                        <td>
+                          <span
+                            style="
+                              background-color: green;
+                              border-radius: 3px;
+                              color: white;
+                              display: inline-block;
+                              padding: 4px 8px; /* Adjust padding to make it more square */
+                              font-size: 12px; /* Adjust font size for proper alignment */
+                            "
+                            >Complete</span
+                          >
+                        </td>
+                        <td>
+                          <img
+                            src="./assets/watchicon.bmp"
+                            alt="watch icon"
+                          /><span>04:10<span>am</span></span>
+                        </td>
+                        <td>Amelia</td>
+                        <td>
+                          <img src="./assets/uparrow.bmp" alt="arrowUp" /><span
+                            >66%</span
+                          >
+                        </td>
+                      </tr>
+                      <tr class="project-row">
+                        <td style="border-radius: 3px">Pending...</td>
+                        <td>
+                          <img
+                            src="./assets/watchicon.bmp"
+                            alt="watch icon"
+                          /><span>12:18<span>am</span></span>
+                        </td>
+                        <td>Damian</td>
+                        <td>
+                          <img src="./assets/uparrow.bmp" alt="arrowUp" /><span
+                            >23%</span
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="todo-list">
+                  <div class="Todolist-header">
+                    <h1>Small to do list</h1>
+                    <div>
+                      <img src="./assets/messagesarrow icon.bmp" alt="icon" />
+                      <img src="./assets/messagetoolicon.bmp" alt="icon" />
+                      <img src="./assets/messagecloseicon.bmp" alt="icon" />
+                    </div>
+                  </div>
+                  <div class="todoList-contain">
+                    <div class="todo">
+                      <input
+                        type="checkbox"
+                        id="task1"
+                        class="todo-checkbox"
+                        checked
+                      />
+                      <h2 class="todo-text">Buy milk</h2>
+                    </div>
+                    <div class="todo">
+                      <input type="checkbox" id="task1" class="todo-checkbox" />
+                      <h2 class="todo-text">
+                        Go to Shop and Find some Products.
+                      </h2>
+                    </div>
+                    <div class="todo">
+                      <input type="checkbox" id="task1" class="todo-checkbox" />
+                      <h2 class="todo-text">
+                        Send document to Mike
+                        <span style="background-color: lawngreen"
+                          >1min ago</span
+                        >
+                      </h2>
+                    </div>
+                    <div class="todo">
+                      <input
+                        type="checkbox"
+                        id="task1"
+                        class="todo-checkbox"
+                        checked
+                      />
+                      <h2 class="todo-text">Go to doctor dr.smith ></h2>
+                    </div>
+                    <div class="todo">
+                      <input type="checkbox" id="task1" class="todo-checkbox" />
+                      <h2 class="todo-text">Plan vacation ></h2>
+                    </div>
+                    <div class="todo">
+                      <input type="checkbox" id="task1" class="todo-checkbox" />
+                      <h2 class="todo-text">Create new stuff ></h2>
+                    </div>
+                    <div class="todo">
+                      <input type="checkbox" id="task1" class="todo-checkbox" />
+                      <h2 class="todo-text">Call to Anna for dinner ></h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="transactions">
+                <div class="transaction-header">
+                  <h1>Transactions Worldwide</h1>
+                </div>
+                <div class="image-container">
+                  <img src="./assets/wordwide.bmp" alt="Worldwide image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <script>
-      function toggleSection(sectionTitle) {
-        const title = sectionTitle;
-        const content = sectionTitle.nextElementSibling;
-        content.classList.toggle("open");
-        title.classList.toggle("open");
+      function toggleSection(element) {
+        const title = element.closest(".section-title");
+        const section = element.closest(".section");
+        const sectionContent = section.querySelector(".section-content");
+        const arrowIcon = section.querySelector("#arrow-icon");
+
+        // Toggle visibility of content
+        if (
+          sectionContent.style.display === "none" ||
+          sectionContent.style.display === ""
+        ) {
+          sectionContent.style.display = "block"; // Show the content
+          section.classList.add("open"); // Add green line and open state
+          title.classList.add("open");
+          arrowIcon.classList.remove("collapsed"); // Rotate arrow down
+        } else {
+          sectionContent.style.display = "none"; // Hide the content
+          section.classList.remove("open"); // Remove green line and open state
+          title.classList.remove("open");
+          arrowIcon.classList.add("collapsed"); // Rotate arrow up
+        }
       }
+
+      function toggleMobileMenu() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("active");
+      }
+
+      // Close sidebar when clicking outside
+      document.addEventListener("click", function (event) {
+        const sidebar = document.querySelector(".sidebar");
+        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+
+        if (
+          !sidebar.contains(event.target) &&
+          event.target !== mobileMenuToggle
+        ) {
+          sidebar.classList.remove("active");
+        }
+      });
     </script>
   </body>
 </html>
